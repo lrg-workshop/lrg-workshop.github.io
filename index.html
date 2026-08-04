@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop on Learning and Reasoning with Graphs — BNAIC/BeNeLearn 2026</title>
+  <meta name="description" content="A workshop at BNAIC/BeNeLearn 2026 bringing together researchers and practitioners working on graph-based AI, with invited talks and an interactive poster session.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-sans text-slate-700 antialiased">
+
+  <!-- ============ NAV ============ -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-2 font-bold text-slate-900">
+        <svg class="h-7 w-7 text-indigo-600" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <line x1="8" y1="8" x2="24" y2="12" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="8" y1="8" x2="12" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="24" y1="12" x2="12" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="8" cy="8" r="4" fill="currentColor"/>
+          <circle cx="24" cy="12" r="3.5" fill="currentColor" opacity="0.7"/>
+          <circle cx="12" cy="24" r="3.5" fill="currentColor" opacity="0.45"/>
+        </svg>
+        <span class="hidden sm:inline">Learning &amp; Reasoning with Graphs</span>
+        <span class="sm:hidden">LRG 2026</span>
+      </a>
+      <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#speakers" class="hover:text-indigo-600">Speakers</a>
+        <a href="#schedule" class="hover:text-indigo-600">Schedule</a>
+        <a href="#abstracts" class="hover:text-indigo-600">Call for Abstracts</a>
+        <a href="#organizers" class="hover:text-indigo-600">Organizers</a>
+      </div>
+      <a href="#abstracts" class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500">
+        Submit an abstract
+      </a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-white">
+    <!-- decorative graph motif -->
+    <svg class="pointer-events-none absolute inset-0 h-full w-full text-indigo-600 opacity-[0.07]" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g stroke="currentColor" stroke-width="1">
+        <line x1="80" y1="60" x2="220" y2="140"/><line x1="220" y1="140" x2="120" y2="280"/>
+        <line x1="220" y1="140" x2="380" y2="80"/><line x1="380" y1="80" x2="540" y2="180"/>
+        <line x1="540" y1="180" x2="420" y2="300"/><line x1="540" y1="180" x2="700" y2="100"/>
+        <line x1="700" y1="100" x2="740" y2="260"/><line x1="420" y1="300" x2="220" y2="140"/>
+        <line x1="120" y1="280" x2="420" y2="300"/><line x1="740" y1="260" x2="540" y2="180"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="80" cy="60" r="8"/><circle cx="220" cy="140" r="12"/><circle cx="120" cy="280" r="7"/>
+        <circle cx="380" cy="80" r="9"/><circle cx="540" cy="180" r="11"/><circle cx="420" cy="300" r="8"/>
+        <circle cx="700" cy="100" r="7"/><circle cx="740" cy="260" r="9"/>
+      </g>
+    </svg>
+
+    <div class="relative mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
+      <span class="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white px-4 py-1.5 text-sm font-semibold text-indigo-700 shadow-sm">
+        Part of BNAIC/BeNeLearn 2026
+      </span>
+      <h1 class="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+        Workshop on Learning and <span class="text-indigo-600">Reasoning with Graphs</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+        Bringing together researchers and practitioners working on graph-based AI —
+        from foundations to applications — with invited talks and an interactive poster session.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-slate-600">
+        <!-- TODO: replace with final date and venue -->
+        <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-slate-200">
+          📅 Date TBA — 3.5-hour session
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-slate-200">
+          📍 Venue TBA (BNAIC/BeNeLearn 2026)
+        </span>
+      </div>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="#abstracts" class="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-indigo-500">
+          Submit an abstract
+        </a>
+        <a href="#schedule" class="rounded-lg bg-white px-6 py-3 font-semibold text-slate-900 shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-50">
+          See the schedule
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
+    <div class="grid gap-12 lg:grid-cols-5">
+      <div class="lg:col-span-3">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">About the workshop</h2>
+        <p class="mt-6 leading-relaxed">
+          Many real-world phenomena can be naturally represented as graphs, including social networks,
+          biological systems, transaction networks, and knowledge bases. Learning and reasoning over
+          graphs have enabled advances in applications such as drug discovery, fraud detection,
+          recommender systems, and scientific discovery.
+        </p>
+        <p class="mt-4 leading-relaxed">
+          This workshop brings together researchers and practitioners working on graph-based AI across
+          foundations and applications. The 3.5-hour session features invited talks and an interactive
+          poster session with extended abstracts, with the goal of fostering discussion and collaboration
+          between research and applications of these topics in the Benelux region.
+        </p>
+        <div class="mt-8 rounded-xl border border-indigo-100 bg-indigo-50/60 p-6">
+          <h3 class="font-semibold text-slate-900">Who should attend</h3>
+          <p class="mt-2 text-sm leading-relaxed">
+            AI researchers, industry practitioners, and PhD and master's students interested in
+            artificial intelligence methods for graph-structured data, as well as applications in
+            science, health, and finance, among others.
+          </p>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-600">Topics of interest</h3>
+        <ul class="mt-4 space-y-3">
+          <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 ring-1 ring-slate-200">
+            Graph neural networks &amp; representation learning
+          </li>
+          <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 ring-1 ring-slate-200">
+            Neuro-symbolic reasoning
+          </li>
+          <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 ring-1 ring-slate-200">
+            Graph representations for relational databases
+          </li>
+          <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 ring-1 ring-slate-200">
+            Graph-based representations with LLMs &amp; AI agents
+          </li>
+          <li class="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-800 ring-1 ring-slate-200">
+            Applications in science, health, finance, and beyond
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPEAKERS ============ -->
+  <section id="speakers" class="scroll-mt-20 bg-slate-50 py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Invited speakers</h2>
+      <p class="mt-3 text-slate-600">Three invited talks, each 30 minutes plus 10 minutes of questions and discussion.</p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- TODO: replace TBA cards with confirmed speakers (photo, name, affiliation, talk title) -->
+        <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-8 text-center">
+          <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-100 text-2xl font-bold text-indigo-400">?</div>
+          <h3 class="mt-4 font-semibold text-slate-900">Speaker to be announced</h3>
+          <p class="mt-1 text-sm text-slate-500">Invited talk 1</p>
+        </div>
+        <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-8 text-center">
+          <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-100 text-2xl font-bold text-indigo-400">?</div>
+          <h3 class="mt-4 font-semibold text-slate-900">Speaker to be announced</h3>
+          <p class="mt-1 text-sm text-slate-500">Invited talk 2</p>
+        </div>
+        <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-8 text-center">
+          <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-100 text-2xl font-bold text-indigo-400">?</div>
+          <h3 class="mt-4 font-semibold text-slate-900">Speaker to be announced</h3>
+          <p class="mt-1 text-sm text-slate-500">Invited talk 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section id="schedule" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
+    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Schedule</h2>
+    <p class="mt-3 text-slate-600">
+      A 3.5-hour session. <span class="font-medium text-slate-800">Times are indicative</span> and will be
+      confirmed with the BNAIC/BeNeLearn 2026 program.
+    </p>
+    <ol class="mt-10 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200">
+      <li class="flex flex-col gap-1 bg-white px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">13:30 – 13:35</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Opening remarks</h3>
+          <p class="text-sm text-slate-500">Welcome and introduction by the organizers</p>
+        </div>
+      </li>
+      <li class="flex flex-col gap-1 bg-white px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">13:35 – 14:15</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Invited talk 1 <span class="font-normal text-slate-400">— speaker TBA</span></h3>
+          <p class="text-sm text-slate-500">30-minute talk + 10 minutes of questions and discussion</p>
+        </div>
+      </li>
+      <li class="flex flex-col gap-1 bg-white px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">14:15 – 14:55</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Invited talk 2 <span class="font-normal text-slate-400">— speaker TBA</span></h3>
+          <p class="text-sm text-slate-500">30-minute talk + 10 minutes of questions and discussion</p>
+        </div>
+      </li>
+      <li class="flex flex-col gap-1 bg-indigo-50/60 px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">14:55 – 16:15</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Interactive poster session</h3>
+          <p class="text-sm text-slate-500">80 minutes of networking and detailed scientific exchange around extended abstracts</p>
+        </div>
+      </li>
+      <li class="flex flex-col gap-1 bg-white px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">16:15 – 16:55</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Invited talk 3 <span class="font-normal text-slate-400">— speaker TBA</span></h3>
+          <p class="text-sm text-slate-500">30-minute talk + 10 minutes of questions and discussion</p>
+        </div>
+      </li>
+      <li class="flex flex-col gap-1 bg-white px-6 py-5 sm:flex-row sm:items-center sm:gap-6">
+        <span class="w-36 shrink-0 font-mono text-sm font-semibold text-indigo-600">16:55 – 17:00</span>
+        <div>
+          <h3 class="font-semibold text-slate-900">Closing remarks</h3>
+          <p class="text-sm text-slate-500">Wrap-up and next steps</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ CALL FOR ABSTRACTS ============ -->
+  <section id="abstracts" class="scroll-mt-20 bg-indigo-600 py-20 text-white">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight">Call for abstracts</h2>
+      <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-indigo-100">
+        We invite extended abstracts on learning and reasoning with graphs — from foundational methods
+        to applications. Submissions are lightly reviewed by the organizers, and accepted abstracts are
+        presented during the interactive poster session.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <!-- TODO: replace # with the submission link when available -->
+        <a href="#" class="rounded-lg bg-white px-6 py-3 font-semibold text-indigo-700 shadow-md transition hover:bg-indigo-50">
+          Submit an extended abstract
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-indigo-200">
+        Submission link and deadline to be announced. Attendance requires registration for
+        BNAIC/BeNeLearn 2026.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ORGANIZERS ============ -->
+  <section id="organizers" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
+    <h2 class="text-3xl font-bold tracking-tight text-slate-900">Organizers</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-600 text-2xl font-bold text-white">DD</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Daniel Daza</h3>
+        <p class="mt-1 text-sm text-slate-500">Vrije Universiteit Amsterdam</p>
+        <a href="mailto:d.dazacruz@vu.nl" class="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-500">d.dazacruz@vu.nl</a>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-500 text-2xl font-bold text-white">PB</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Peter Bloem</h3>
+        <p class="mt-1 text-sm text-slate-500">Vrije Universiteit Amsterdam</p>
+        <a href="mailto:p.bloem@vu.nl" class="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-500">p.bloem@vu.nl</a>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-400 text-2xl font-bold text-white">TC</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Tamara Cucumides</h3>
+        <p class="mt-1 text-sm text-slate-500">University of Antwerp</p>
+        <a href="mailto:Tamara.CucumidesFaundez@uantwerpen.be" class="mt-3 inline-block break-all text-sm font-medium text-indigo-600 hover:text-indigo-500">Tamara.CucumidesFaundez@uantwerpen.be</a>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-300 text-2xl font-bold text-white">AK</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Adem Kikaj</h3>
+        <p class="mt-1 text-sm text-slate-500">KU Leuven</p>
+        <a href="mailto:adem.kikaj@kuleuven.be" class="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-500">adem.kikaj@kuleuven.be</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-slate-200 bg-slate-50 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 text-center text-sm text-slate-500">
+      <p class="font-semibold text-slate-700">Workshop on Learning and Reasoning with Graphs</p>
+      <p>Part of BNAIC/BeNeLearn 2026 — the Benelux conference on AI and machine learning</p>
+    </div>
+  </footer>
+
+</body>
+</html>
